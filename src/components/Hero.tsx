@@ -28,11 +28,11 @@ interface ImageCardData {
 
 const CARDS: ImageCardData[] = [
   {
-    id: 'nexus-ai',
-    title: 'Nexus AI Studio',
-    categoryZh: 'UI/UX 智能体工作台',
-    categoryEn: 'UI/UX Agentic Canvas',
-    imgUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=720&auto=format&fit=crop',
+    id: 's-link-pm',
+    title: '速合 (S-Link) 项目管理平台',
+    categoryZh: 'B端设计 • 敏捷项目管理',
+    categoryEn: 'B2B Enterprise Platform',
+    imgUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=720&auto=format&fit=crop',
     initRotate: -16,
     initX: -22,
     initY: -16,
@@ -40,11 +40,11 @@ const CARDS: ImageCardData[] = [
     zIndex: 10,
   },
   {
-    id: 'veloce-brand',
-    title: 'Veloce Mobility',
-    categoryZh: '品牌全链路视觉重塑',
-    categoryEn: 'Brand Identity System',
-    imgUrl: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=720&auto=format&fit=crop',
+    id: 'tongyi-qwen-aios',
+    title: '通义千问 APP 改版设计',
+    categoryZh: '全场景 AIOS • 数字人伙伴',
+    categoryEn: 'Mobile AI Agent OS',
+    imgUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=720&auto=format&fit=crop',
     initRotate: 15,
     initX: 24,
     initY: -18,
@@ -52,11 +52,11 @@ const CARDS: ImageCardData[] = [
     zIndex: 20,
   },
   {
-    id: 'aether-3d',
-    title: 'Aether Creature',
-    categoryZh: '3D IP 数智潮玩宇宙',
-    categoryEn: '3D Character & Toy',
-    imgUrl: 'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=720&auto=format&fit=crop',
+    id: 'chicalt-ecommerce',
+    title: 'ChicAlt 跨境电商 APP',
+    categoryZh: '跨境电商 • AI虚拟试衣',
+    categoryEn: 'Fashion E-Commerce & AI',
+    imgUrl: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=720&auto=format&fit=crop',
     initRotate: -8,
     initX: -16,
     initY: 16,
@@ -64,11 +64,11 @@ const CARDS: ImageCardData[] = [
     zIndex: 30,
   },
   {
-    id: 'lumina-fintech',
-    title: 'Lumina SuperApp',
-    categoryZh: '全球财富管理移动端',
-    categoryEn: 'FinTech Mobile UX',
-    imgUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=720&auto=format&fit=crop',
+    id: 'sister-liu-ip',
+    title: '“刘姐·菜篮子” 品牌 IP 衍生',
+    categoryZh: '3D潮玩 IP • 品牌全案',
+    categoryEn: '3D Mascot Universe',
+    imgUrl: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=720&auto=format&fit=crop',
     initRotate: 19,
     initX: 20,
     initY: 22,
@@ -76,11 +76,11 @@ const CARDS: ImageCardData[] = [
     zIndex: 40,
   },
   {
-    id: 'chronos-aigc',
-    title: 'Chronos Matrix',
-    categoryZh: 'AIGC 工业化生成流',
-    categoryEn: 'AIGC Generative Stream',
-    imgUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=720&auto=format&fit=crop',
+    id: 'nio-aigc-super-symbol',
+    title: '蔚来 NIO × AIGC 超级符号海报',
+    categoryZh: 'AIGC 概念视觉 • 超级符号',
+    categoryEn: 'AIGC Super Symbol Post',
+    imgUrl: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=720&auto=format&fit=crop',
     initRotate: -2,
     initX: 0,
     initY: 0,
@@ -272,29 +272,31 @@ export const Hero = ({ language }: HeroProps) => {
               </span>
             </div>
 
-            {/* Main Multi-line Display Title (发光白色与浅紫色渐变光晕弥散效果) */}
+            {/* Main Multi-line Display Title (发光白色与浅紫色渐变光晕弥散效果：第一行 Fengyiran，第二行 Portfolio) */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.03] mb-4">
-              <span className="block text-white text-glow-white">Fengyiran</span>
-              <span className="relative inline-block text-luminous-flow">
-                {language === 'zh' ? '作品集' : 'Portfolio'}
+              <span className="block text-white text-glow-white tracking-tight">
+                Fengyiran
+              </span>
+              <span className="relative inline-block text-luminous-flow tracking-tight">
+                Portfolio
                 {/* Breathing soft purple glow aura behind the title */}
                 <span className="absolute -inset-3 bg-purple-500/25 rounded-2xl blur-xl -z-10 animate-breathe-glow pointer-events-none" />
               </span>
             </h1>
 
             {/* Positioning line */}
-            <div className="text-lg sm:text-2xl font-bold tracking-tight mb-4 flex items-center gap-2.5">
-              <span className="text-glow-subtle">{language === 'zh' ? 'UX / 视觉设计' : 'UX & Visual Designer'}</span>
+            <div className="text-lg sm:text-2xl font-bold tracking-tight mb-4 flex flex-wrap items-center gap-2.5">
+              <span className="text-glow-subtle">{language === 'zh' ? 'UI设计师 / 视觉设计师' : 'UI & Visual Designer'}</span>
               <span className="text-xs px-2.5 py-0.5 rounded-md bg-purple-950/80 border border-purple-500/40 text-purple-300 font-mono font-medium shadow-[0_0_12px_rgba(168,85,247,0.25)]">
-                Dual-Discipline
+                武汉科技大学
               </span>
             </div>
 
             {/* Description Text (14px, 浅灰白, 常规行高) */}
             <p className="text-[14px] leading-relaxed text-gray-300 font-normal max-w-lg mb-8 drop-shadow-sm">
               {language === 'zh'
-                ? '专注于数字产品全链路体验与先锋视觉探索，兼具严谨的交互系统逻辑与高质感视觉美学。2024 — 2026 精选设计实践。'
-                : 'Bridging human-centered UX architecture and progressive visual craftsmanship. Selected design works 2024–2026.'}
+                ? '具备UI与视觉双栖背景，拥有3个独立UI项目及海量视觉物料设计经验。精通各类设计软件并能深度运用AIGC工具实现商业化量产。'
+                : 'Specializing in UI & visual craft. 3 independent UI systems, extensive brand collateral, and advanced AIGC video/music pipelines.'}
             </p>
 
             {/* CTA Button (8px圆角, 16px粗体, 紫色品牌渐变与发光投影) */}

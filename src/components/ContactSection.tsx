@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Copy, Check, Send, Sparkles, MapPin, MessageSquare, ArrowUpRight, Heart } from 'lucide-react';
+import { Mail, Copy, Check, Send, Sparkles, MapPin, MessageSquare, ArrowUpRight, Heart, Phone } from 'lucide-react';
 import { Language } from '../types';
 import { designerProfile } from '../data/portfolioData';
 
@@ -10,6 +10,8 @@ interface ContactSectionProps {
 export const ContactSection = ({ language }: ContactSectionProps) => {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedWeChat, setCopiedWeChat] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
+  const [copiedZcool, setCopiedZcool] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -28,6 +30,22 @@ export const ContactSection = ({ language }: ContactSectionProps) => {
     navigator.clipboard.writeText(designerProfile.contact.wechat);
     setCopiedWeChat(true);
     setTimeout(() => setCopiedWeChat(false), 2500);
+  };
+
+  const handleCopyPhone = () => {
+    if (designerProfile.contact.phone) {
+      navigator.clipboard.writeText(designerProfile.contact.phone);
+      setCopiedPhone(true);
+      setTimeout(() => setCopiedPhone(false), 2500);
+    }
+  };
+
+  const handleCopyZcool = () => {
+    if (designerProfile.contact.zcool) {
+      navigator.clipboard.writeText(designerProfile.contact.zcool);
+      setCopiedZcool(true);
+      setTimeout(() => setCopiedZcool(false), 2500);
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -63,7 +81,7 @@ export const ContactSection = ({ language }: ContactSectionProps) => {
               {/* Email Card with 1-click copy */}
               <div className="p-5 rounded-[16px] bg-[#120c27]/85 border border-purple-500/25 shadow-[0_6px_24px_rgba(0,0,0,0.5)] hover:border-purple-400/50 backdrop-blur-md transition-all">
                 <span className="text-[11px] text-purple-300 font-mono uppercase tracking-wider font-semibold">
-                  {language === 'zh' ? '官方商务邮箱 (Direct Email)' : 'Direct Inquiries'}
+                  {language === 'zh' ? '个人邮箱 (Personal Email)' : 'Personal Email'}
                 </span>
                 <div className="flex items-center justify-between mt-2">
                   <span className="text-sm sm:text-base font-bold text-white tracking-wide truncate mr-2">
@@ -88,15 +106,47 @@ export const ContactSection = ({ language }: ContactSectionProps) => {
                 )}
               </div>
 
-              {/* WeChat & Location Card */}
-              <div className="p-5 rounded-[16px] bg-[#120c27]/85 border border-purple-500/25 shadow-[0_6px_24px_rgba(0,0,0,0.5)] hover:border-purple-400/50 backdrop-blur-md transition-all">
-                <span className="text-[11px] text-purple-300 font-mono uppercase tracking-wider font-semibold">
-                  {language === 'zh' ? '即时通讯与坐标' : 'Direct Message & Location'}
+              {/* Phone & WeChat Card */}
+              <div className="p-5 rounded-[16px] bg-[#120c27]/85 border border-purple-500/25 shadow-[0_6px_24px_rgba(0,0,0,0.5)] hover:border-purple-400/50 backdrop-blur-md transition-all space-y-4">
+                <span className="text-[11px] text-purple-300 font-mono uppercase tracking-wider font-semibold block">
+                  {language === 'zh' ? '电话与即时通讯' : 'Direct Call & Message'}
                 </span>
-                <div className="flex items-center justify-between mt-2">
+
+                {/* Phone */}
+                {designerProfile.contact.phone && (
+                  <div className="flex items-center justify-between pb-3 border-b border-purple-900/30">
+                    <div className="flex flex-col">
+                      <span className="text-xs text-gray-400 font-mono">Phone / 电话：</span>
+                      <span className="text-sm font-bold text-white font-mono">
+                        {designerProfile.contact.phone}
+                      </span>
+                    </div>
+                    <button
+                      onClick={handleCopyPhone}
+                      className="p-2 rounded-[8px] bg-purple-950/70 hover:bg-purple-900/80 border border-purple-500/30 text-purple-300 hover:text-white transition-all shrink-0 cursor-pointer"
+                      title="Copy Phone"
+                    >
+                      {copiedPhone ? (
+                        <Check className="w-4 h-4 text-emerald-400" />
+                      ) : (
+                        <Copy className="w-4 h-4" />
+                      )}
+                    </button>
+                  </div>
+                )}
+                {copiedPhone && (
+                  <span className="text-[11px] text-emerald-400 block font-medium">
+                    ✓ {language === 'zh' ? '电话号码已成功复制' : 'Phone copied!'}
+                  </span>
+                )}
+
+                {/* WeChat */}
+                <div className="flex items-center justify-between">
                   <div className="flex flex-col">
                     <span className="text-xs text-gray-400 font-mono">WeChat / 微信：</span>
-                    <span className="text-sm font-bold text-white">{designerProfile.contact.wechat}</span>
+                    <span className="text-sm font-bold text-white">
+                      {designerProfile.contact.wechat}
+                    </span>
                   </div>
                   <button
                     onClick={handleCopyWeChat}
@@ -111,38 +161,63 @@ export const ContactSection = ({ language }: ContactSectionProps) => {
                   </button>
                 </div>
                 {copiedWeChat && (
-                  <span className="text-[11px] text-emerald-400 mt-1 block font-medium">
+                  <span className="text-[11px] text-emerald-400 block font-medium">
                     ✓ {language === 'zh' ? '微信号已成功复制' : 'WeChat ID copied!'}
                   </span>
                 )}
 
-                <div className="flex items-center gap-2 text-xs text-gray-400 mt-3 pt-3 border-t border-purple-900/30">
+                <div className="flex items-center gap-2 text-xs text-gray-400 pt-3 border-t border-purple-900/30">
                   <MapPin className="w-3.5 h-3.5 text-purple-400" />
                   <span>{designerProfile.contact.location[language]}</span>
                 </div>
               </div>
             </div>
 
-            {/* Social Links Matrix */}
-            <div>
-              <span className="text-xs uppercase tracking-wider text-purple-300 font-mono block mb-3 font-semibold">
-                {language === 'zh' ? '设计作品集主页与社交矩阵' : 'Design Portfolios & Socials'}
-              </span>
-              <div className="flex flex-wrap gap-2">
-                {designerProfile.contact.socials.map((soc, idx) => (
-                  <a
-                    key={idx}
-                    href={soc.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-[8px] bg-[#150f2e] hover:bg-purple-950/70 border border-purple-500/20 hover:border-purple-400/50 text-xs text-gray-300 hover:text-white transition-all hover:scale-105"
-                  >
-                    <span>{soc.platform}</span>
-                    <ArrowUpRight className="w-3 h-3 text-purple-400" />
-                  </a>
-                ))}
+            {/* ZCOOL Card */}
+            {designerProfile.contact.zcool && (
+              <div className="p-5 rounded-[16px] bg-[#120c27]/85 border border-purple-500/25 shadow-[0_6px_24px_rgba(0,0,0,0.5)] hover:border-purple-400/50 backdrop-blur-md transition-all">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[11px] text-purple-300 font-mono uppercase tracking-wider font-semibold">
+                    {language === 'zh' ? '站酷主页 (ZCOOL)' : 'ZCOOL Portfolio'}
+                  </span>
+                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-950/70 border border-amber-500/30 text-amber-300 font-mono font-semibold">
+                    官方认证设计师
+                  </span>
+                </div>
+
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-3 pt-3 border-t border-purple-900/30">
+                  <span className="text-xs text-gray-300 font-mono truncate max-w-[220px]">
+                    {designerProfile.contact.zcool}
+                  </span>
+
+                  <div className="flex items-center gap-2 shrink-0">
+                    <button
+                      onClick={handleCopyZcool}
+                      className="flex items-center gap-1 px-3 py-1.5 rounded-[8px] bg-purple-950/70 hover:bg-purple-900/80 border border-purple-500/30 text-xs text-purple-300 hover:text-white transition-all cursor-pointer"
+                      title="Copy Link"
+                    >
+                      {copiedZcool ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                      <span>{copiedZcool ? '已复制' : '复制链接'}</span>
+                    </button>
+
+                    <a
+                      href={designerProfile.contact.zcool}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 px-3.5 py-1.5 rounded-[8px] bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-xs font-bold text-white shadow-[0_2px_14px_rgba(147,51,234,0.4)] transition-all cursor-pointer"
+                    >
+                      <span>访问站酷</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+                {copiedZcool && (
+                  <span className="text-[11px] text-emerald-400 mt-2 block font-medium">
+                    ✓ 站酷主页链接已成功复制到剪贴板！
+                  </span>
+                )}
               </div>
-            </div>
+            )}
           </div>
 
           {/* Right Column: Quick Interactive Message Box */}
@@ -265,7 +340,7 @@ export const ContactSection = ({ language }: ContactSectionProps) => {
           </div>
 
           <div className="flex items-center gap-1.5 text-purple-300 font-medium">
-            <span>Fengyiran • UX & Visual Design Portfolio</span>
+            <span>{language === 'zh' ? '冯依然 • UI & 视觉设计作品集' : 'Feng Yiran • UI & Visual Design Portfolio'}</span>
           </div>
         </div>
       </div>

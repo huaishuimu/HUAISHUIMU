@@ -138,63 +138,31 @@ export const ProjectsSection = ({
 
                   {/* Content Container */}
                   <div
-                    className={`p-6 sm:p-8 flex flex-col justify-between ${
+                    className={`p-6 sm:p-7 flex flex-col justify-center ${
                       isFeatured ? 'lg:w-5/12' : 'w-full'
                     }`}
                   >
-                    <div>
-                      {/* Role & Year */}
-                      <div className="text-xs text-purple-400 font-mono mb-2 font-medium">
-                        {project.role[language]}
-                      </div>
+                    {/* Project Title (发光浅白粗体) */}
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-2.5 group-hover:text-purple-300 transition-colors drop-shadow-sm">
+                      {project.title[language]}
+                    </h3>
 
-                      {/* Title (发光浅白粗体) */}
-                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors drop-shadow-sm">
-                        {project.title[language]}
-                      </h3>
-
-                      {/* Subtitle / summary (浅灰文本) */}
-                      <p className="text-xs sm:text-sm text-gray-300 leading-relaxed mb-6 line-clamp-3">
-                        {project.subtitle[language]}
-                      </p>
-
-                      {/* Metrics bar */}
-                      <div className="grid grid-cols-2 gap-2 mb-6 p-3 rounded-[12px] bg-purple-950/40 border border-purple-500/25">
-                        {project.metrics.slice(0, 2).map((m, mIdx) => (
-                          <div key={mIdx} className="flex flex-col">
-                            <span className="text-base sm:text-lg font-bold text-purple-300">
-                              {m.value}
-                            </span>
-                            <span className="text-[10px] text-gray-400 font-medium">
-                              {m.label[language]}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Tag Chips */}
-                      <div className="flex flex-wrap gap-1.5 mb-6">
-                        {project.tags.map((tag, tIdx) => (
-                          <span
-                            key={tIdx}
-                            className="text-[11px] px-2.5 py-0.5 rounded-full bg-[#191036] text-purple-200 border border-purple-500/20"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
+                    {/* Capsule Tags (精简概括作品主要特点的胶囊标签) */}
+                    <div className="flex flex-wrap items-center gap-2 mb-4">
+                      {project.tags.slice(0, 2).map((tag, tIdx) => (
+                        <span
+                          key={tIdx}
+                          className="text-xs px-3 py-1 rounded-full bg-purple-950/70 text-purple-200 border border-purple-500/30 font-medium"
+                        >
+                          {tag}
+                        </span>
+                      ))}
                     </div>
 
-                    {/* View Details Button with 8px corner */}
-                    <div className="pt-4 border-t border-purple-900/30 flex items-center justify-between">
-                      <span className="text-xs font-bold text-purple-300 group-hover:text-purple-200 flex items-center gap-1">
-                        {language === 'zh' ? '查看深度案例剖析' : 'View Full Case Study'}
-                        <ArrowUpRight className="w-3.5 h-3.5" />
-                      </span>
-                      <span className="text-[11px] text-gray-400 font-mono">
-                        {project.tools[0]} + {project.tools[1]}
-                      </span>
-                    </div>
+                    {/* Project Summary (项目简介) */}
+                    <p className="text-xs sm:text-sm text-gray-300 leading-relaxed line-clamp-4">
+                      {project.summary[language]}
+                    </p>
                   </div>
                 </div>
               </div>

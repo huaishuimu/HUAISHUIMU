@@ -45,27 +45,29 @@ export const Navbar = ({
         }`}
       >
         {/* Brand / Designer Identity */}
-        <a
-          href="#"
-          className="flex items-center gap-2.5 group"
+        <div
+          className="flex items-center gap-2.5 group cursor-default"
           id="nav-logo-link"
         >
-          <div className="relative w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-indigo-500 p-[1.5px] transition-transform duration-300 group-hover:scale-105 shadow-[0_0_14px_rgba(168,85,247,0.4)]">
-            <div className="w-full h-full rounded-full bg-[#0d091f] flex items-center justify-center text-purple-300 font-extrabold text-[11px]">
-              YR
-            </div>
-            <span className="absolute -bottom-0.5 -right-0.5 w-2 h-2 bg-emerald-400 rounded-full border-2 border-[#0d091f]" />
+          <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-tr from-purple-500 to-indigo-500 p-[1.5px] transition-transform duration-300 group-hover:scale-105 shadow-[0_0_14px_rgba(168,85,247,0.4)] shrink-0 overflow-visible">
+            <img
+              src={designerProfile.avatar || '/avatar.jpg'}
+              alt={designerProfile.name[language]}
+              className="w-full h-full rounded-full object-cover object-top select-none"
+              referrerPolicy="no-referrer"
+            />
+            <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-[#0d091f]" />
           </div>
           <div className="flex flex-col">
             <span className="text-sm font-bold tracking-tight text-white group-hover:text-purple-200 transition-colors drop-shadow-[0_0_12px_rgba(192,132,252,0.3)]">
-              Fengyiran
+              {designerProfile.name[language]}
             </span>
             <span className="text-[10px] text-gray-400 font-mono tracking-tight flex items-center gap-1">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-              {language === 'zh' ? 'UX / 视觉设计' : 'UX & Visual'}
+              <span>{language === 'zh' ? 'UI / 视觉设计' : 'UI & Visual'}</span>
             </span>
           </div>
-        </a>
+        </div>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-1 lg:gap-2">

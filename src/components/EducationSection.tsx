@@ -1,6 +1,6 @@
-import { GraduationCap, Award, BookOpen, CheckCircle2, Sparkles, HeartHandshake } from 'lucide-react';
-import { Education, Language } from '../types';
-import { educationData } from '../data/portfolioData';
+import { GraduationCap, Award, BookOpen, CheckCircle2, Sparkles, UserCheck, Trophy } from 'lucide-react';
+import { Language } from '../types';
+import { educationData, designerProfile } from '../data/portfolioData';
 
 interface EducationSectionProps {
   language: Language;
@@ -16,15 +16,15 @@ export const EducationSection = ({ language }: EducationSectionProps) => {
         <div className="mb-14 text-center sm:text-left">
           <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-purple-300 font-mono mb-3">
             <GraduationCap className="w-3.5 h-3.5 text-purple-400" />
-            <span>{language === 'zh' ? '学术背景 • EDUCATION' : 'ACADEMIC BACKGROUND • EDUCATION'}</span>
+            <span>{language === 'zh' ? '学历背景 • EDUCATION' : 'ACADEMIC BACKGROUND • EDUCATION'}</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white text-glow-white tracking-tight leading-[1.08]">
-            {language === 'zh' ? '学历背景与设计理论修养' : 'Education & Theoretical Foundation'}
+            {language === 'zh' ? '学历背景与获奖荣誉' : 'Education & Honors'}
           </h2>
           <p className="max-w-xl text-xs sm:text-sm text-gray-300 mt-3 leading-relaxed">
             {language === 'zh'
-              ? '扎根顶尖艺术学府，接受严苛现代设计造型、排版网格、交互心理与数字媒体系统训练。'
-              : 'Formed at premier art academy, grounded in modernist typography, form composition, cognitive psychology, and generative code.'}
+              ? '武汉科技大学视觉传达专业，专业成绩前10%（绩点3.5），中共党员，并斩获多项国家级与省级设计大奖。'
+              : 'Wuhan University of Science and Technology, top 10% academic standing, CPC member, recipient of multiple national design awards.'}
           </p>
         </div>
 
@@ -32,14 +32,23 @@ export const EducationSection = ({ language }: EducationSectionProps) => {
         <div className="p-6 sm:p-10 rounded-[16px] bg-[#120c27]/85 border border-purple-500/25 shadow-[0_6px_24px_rgba(0,0,0,0.5)] hover:border-purple-400/50 hover:shadow-[0_12px_36px_rgba(147,51,234,0.25)] backdrop-blur-md transition-all mb-8">
           <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
             <div>
-              <div className="flex flex-wrap items-center gap-2.5 mb-2">
+              <div className="flex flex-wrap items-center gap-2 mb-2.5">
                 <span className="text-xs px-3 py-1 rounded-full bg-purple-950/70 border border-purple-500/30 text-purple-300 font-mono font-semibold">
                   {edu.degree[language]}
                 </span>
-                {edu.badge && (
-                  <span className="text-xs px-3 py-1 rounded-full bg-amber-950/60 border border-amber-500/30 text-amber-300 font-mono font-semibold flex items-center gap-1">
-                    <Award className="w-3.5 h-3.5" />
-                    {edu.badge[language]}
+                <span className="text-xs px-3 py-1 rounded-full bg-amber-950/60 border border-amber-500/30 text-amber-300 font-mono font-semibold flex items-center gap-1">
+                  <Award className="w-3.5 h-3.5" />
+                  <span>绩点 3.5 (专业前10%)</span>
+                </span>
+                {edu.politics && (
+                  <span className="text-xs px-3 py-1 rounded-full bg-rose-950/60 border border-rose-500/30 text-rose-300 font-mono font-semibold flex items-center gap-1">
+                    <UserCheck className="w-3.5 h-3.5" />
+                    <span>{edu.politics[language]}</span>
+                  </span>
+                )}
+                {edu.position && (
+                  <span className="text-xs px-3 py-1 rounded-full bg-blue-950/60 border border-blue-500/30 text-blue-300 font-mono font-semibold">
+                    {edu.position[language]}
                   </span>
                 )}
               </div>
@@ -64,8 +73,8 @@ export const EducationSection = ({ language }: EducationSectionProps) => {
             {/* Honors & Scholarships */}
             <div>
               <h4 className="text-xs uppercase tracking-wider text-purple-300 font-mono font-semibold mb-3 flex items-center gap-2">
-                <Award className="w-4 h-4" />
-                {language === 'zh' ? '学术荣誉与代表奖项' : 'Academic Honors & Awards'}
+                <Trophy className="w-4 h-4 text-amber-400" />
+                {language === 'zh' ? '获奖信息与设计竞赛荣誉' : 'Awards & Honors'}
               </h4>
               <ul className="space-y-2.5">
                 {edu.honors.map((honor, idx) => (
@@ -80,8 +89,8 @@ export const EducationSection = ({ language }: EducationSectionProps) => {
             {/* Core Focus Disciplines */}
             <div>
               <h4 className="text-xs uppercase tracking-wider text-purple-300 font-mono font-semibold mb-3 flex items-center gap-2">
-                <BookOpen className="w-4 h-4" />
-                {language === 'zh' ? '深研学术方向与核心课程' : 'Research & Curriculum Focus'}
+                <BookOpen className="w-4 h-4 text-purple-400" />
+                {language === 'zh' ? '主修课程与学术方向' : 'Curriculum & Coursework'}
               </h4>
               <div className="flex flex-wrap gap-2">
                 {edu.focusAreas.map((area, idx) => (
@@ -100,13 +109,13 @@ export const EducationSection = ({ language }: EducationSectionProps) => {
         {/* Designer Core Philosophy Quote */}
         <div className="p-6 sm:p-8 rounded-[16px] bg-[#0e0920]/80 border border-purple-500/30 shadow-[0_0_24px_rgba(168,85,247,0.2)] backdrop-blur-md text-center flex flex-col items-center">
           <Sparkles className="w-6 h-6 text-purple-400 mb-3" />
-          <blockquote className="text-base sm:text-xl font-light italic text-gray-200 text-glow-subtle max-w-2xl leading-relaxed mb-3">
+          <blockquote className="text-base sm:text-lg font-light text-gray-200 text-glow-subtle max-w-2xl leading-relaxed mb-3">
             {language === 'zh'
-              ? '“设计是理性的结构与感性的光芒共舞。技术会进化，但对用户情感的精准关怀与对纯粹美学的执着永远是核心。”'
-              : '"Design is the seamless dance of structural rigor and emotive luminescence. Tools evolve, but empathy and aesthetic truth remain eternal."'}
+              ? '“擅长平衡设计美学与业务需求，具备极强的逻辑拆解能力与执行效率。能与产品及研发团队无缝对接，是一位懂产品逻辑、懂用户心理、且具备未来技术视野的协作伙伴。”'
+              : '"Balancing aesthetic craft and product viability with rigorous logical decomposition and seamless cross-team execution."'}
           </blockquote>
           <span className="text-xs text-purple-300 font-mono font-semibold">
-            — Fengyiran / UX & Visual Design
+            — {designerProfile.name[language]} ({designerProfile.pinyin}) • {designerProfile.title[language]}
           </span>
         </div>
       </div>

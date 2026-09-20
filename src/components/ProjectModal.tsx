@@ -73,25 +73,11 @@ export const ProjectModal = ({ project, language, onClose }: ProjectModalProps) 
           />
         </div>
 
-        {/* Quantified Metrics Highlight Bar */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 p-5 rounded-[16px] bg-[#160e33]/90 border border-purple-500/30 mb-8">
-          {project.metrics.map((metric, idx) => (
-            <div key={idx} className="flex flex-col">
-              <span className="text-2xl sm:text-3xl font-extrabold text-purple-300 text-glow-subtle">
-                {metric.value}
-              </span>
-              <span className="text-xs text-gray-300 mt-1 font-medium">
-                {metric.label[language]}
-              </span>
-            </div>
-          ))}
-        </div>
-
         {/* Project Summary */}
         <div className="mb-8">
           <h3 className="text-xs uppercase tracking-widest text-purple-300 font-mono mb-2 flex items-center gap-2 font-bold">
             <Sparkles className="w-3.5 h-3.5 text-purple-400" />
-            {language === 'zh' ? '项目概览 (Executive Summary)' : 'Executive Summary'}
+            {language === 'zh' ? '项目概览 (Project Overview)' : 'Project Overview'}
           </h3>
           <p className="text-gray-200 leading-relaxed text-sm sm:text-base">
             {project.summary[language]}

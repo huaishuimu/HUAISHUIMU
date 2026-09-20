@@ -41,13 +41,15 @@ export interface Project {
 
 export interface Experience {
   id: string;
+  type: 'internship' | 'project' | 'campus';
+  typeLabel: LocalizedString;
   company: LocalizedString;
   role: LocalizedString;
   period: string;
   location: LocalizedString;
   badge?: LocalizedString;
   description: LocalizedString;
-  achievements: LocalizedString[];
+  achievements?: LocalizedString[];
   skills: string[];
 }
 
@@ -57,6 +59,9 @@ export interface Education {
   degree: LocalizedString;
   major: LocalizedString;
   period: string;
+  gpa?: string;
+  politics?: LocalizedString;
+  position?: LocalizedString;
   badge?: LocalizedString;
   description: LocalizedString;
   honors: LocalizedString[];
@@ -83,6 +88,7 @@ export interface ToolStack {
 }
 
 export interface DesignerProfile {
+  avatar?: string;
   name: LocalizedString;
   pinyin: string;
   title: LocalizedString;
@@ -96,8 +102,10 @@ export interface DesignerProfile {
     desc: LocalizedString;
   }[];
   contact: {
+    phone?: string;
     email: string;
     wechat: string;
+    zcool?: string;
     location: LocalizedString;
     socials: {
       platform: string;
