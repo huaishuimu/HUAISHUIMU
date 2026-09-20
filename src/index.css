@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html, body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom dark-mode scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07050e;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.3);
+  border-radius: 9999px;
+  border: 2px solid #07050e;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(192, 132, 252, 0.6);
+}
+
+/* Luminous text flow animation with breathing diffusion aura */
+@keyframes textFlowShimmer {
+  0% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 16px rgba(192, 132, 252, 0.4)) drop-shadow(0 0 32px rgba(147, 51, 234, 0.25));
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 24px rgba(233, 213, 255, 0.6)) drop-shadow(0 0 48px rgba(168, 85, 247, 0.4));
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 16px rgba(192, 132, 252, 0.4)) drop-shadow(0 0 32px rgba(147, 51, 234, 0.25));
+  }
+}
+
+.text-luminous-flow {
+  background: linear-gradient(115deg, #ffffff 0%, #f3e8ff 22%, #d8b4fe 45%, #ffffff 68%, #c084fc 100%);
+  background-size: 260% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textFlowShimmer 6s ease-in-out infinite;
+}
+
+/* Luminous white text with soft lilac glowing halo */
+.text-glow-white {
+  color: #ffffff;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.45), 0 0 36px rgba(192, 132, 252, 0.35);
+}
+
+/* Luminous lilac gradient text */
+.text-glow-purple {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 30%, #ddd6fe 65%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.4));
+}
+
+/* Subtle glowing subtitle text */
+.text-glow-subtle {
+  color: #e4e4e7;
+  text-shadow: 0 0 14px rgba(192, 132, 252, 0.25);
+}
+
+/* Breathing glow pulse animation */
+@keyframes breathePulse {
+  0%, 100% {
+    transform: scale(0.96);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.85;
+  }
+}
+
+.animate-breathe-glow {
+  animation: breathePulse 4s ease-in-out infinite;
+}
+
+/* Premium Dark Glass Card Utilities */
+.glass-dark-card {
+  background: rgba(14, 10, 25, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(168, 85, 247, 0.18);
+  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.6);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-dark-card:hover {
+  background: rgba(18, 12, 34, 0.88);
+  border-color: rgba(192, 132, 252, 0.4);
+  box-shadow: 0 16px 44px -8px rgba(147, 51, 234, 0.3);
+}
