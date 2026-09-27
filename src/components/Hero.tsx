@@ -2,6 +2,11 @@ import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { ArrowDown, Copy, Check, Sparkles, ExternalLink } from 'lucide-react';
 import { Language, ProjectCategory } from '../types';
+import card1Img from '../assets/images/regenerated_image_1790124919848.png';
+import card2Img from '../assets/images/regenerated_image_1790124924991.png';
+import card3Img from '../assets/images/regenerated_image_1790124922846.png';
+import card4Img from '../assets/images/regenerated_image_1790124916164.png';
+import card5Img from '../assets/images/regenerated_image_1790124911271.png';
 
 interface HeroProps {
   language: Language;
@@ -32,7 +37,7 @@ const CARDS: ImageCardData[] = [
     title: '速合 (S-Link) 项目管理平台',
     categoryZh: 'B端设计 • 敏捷项目管理',
     categoryEn: 'B2B Enterprise Platform',
-    imgUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=720&auto=format&fit=crop',
+    imgUrl: card1Img,
     initRotate: -16,
     initX: -22,
     initY: -16,
@@ -44,7 +49,7 @@ const CARDS: ImageCardData[] = [
     title: '通义千问 APP 改版设计',
     categoryZh: '全场景 AIOS • 数字人伙伴',
     categoryEn: 'Mobile AI Agent OS',
-    imgUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=720&auto=format&fit=crop',
+    imgUrl: card2Img,
     initRotate: 15,
     initX: 24,
     initY: -18,
@@ -56,7 +61,7 @@ const CARDS: ImageCardData[] = [
     title: 'ChicAlt 跨境电商 APP',
     categoryZh: '跨境电商 • AI虚拟试衣',
     categoryEn: 'Fashion E-Commerce & AI',
-    imgUrl: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=720&auto=format&fit=crop',
+    imgUrl: card3Img,
     initRotate: -8,
     initX: -16,
     initY: 16,
@@ -68,7 +73,7 @@ const CARDS: ImageCardData[] = [
     title: '“刘姐·菜篮子” 品牌 IP 衍生',
     categoryZh: '3D潮玩 IP • 品牌全案',
     categoryEn: '3D Mascot Universe',
-    imgUrl: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=720&auto=format&fit=crop',
+    imgUrl: card4Img,
     initRotate: 19,
     initX: 20,
     initY: 22,
@@ -80,7 +85,7 @@ const CARDS: ImageCardData[] = [
     title: '蔚来 NIO × AIGC 超级符号海报',
     categoryZh: 'AIGC 概念视觉 • 超级符号',
     categoryEn: 'AIGC Super Symbol Post',
-    imgUrl: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=720&auto=format&fit=crop',
+    imgUrl: card5Img,
     initRotate: -2,
     initX: 0,
     initY: 0,

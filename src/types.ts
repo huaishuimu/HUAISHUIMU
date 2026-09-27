@@ -27,7 +27,12 @@ export interface Project {
   role: LocalizedString;
   tags: string[];
   coverImage: string;
+  videoUrl?: string;
+  videoPoster?: string;
   gallery: string[];
+  longStripImage?: string;
+  longStripImages?: string[];
+  zcoolUrl?: string;
   featured: boolean;
   accentColor: string; // hex or tailwind tone e.g. '#a855f7'
   summary: LocalizedString;

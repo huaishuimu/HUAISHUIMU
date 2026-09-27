@@ -142,8 +142,14 @@ export const ProjectsSection = ({
                       isFeatured ? 'lg:w-5/12' : 'w-full'
                     }`}
                   >
-                    {/* Project Title (发光浅白粗体) */}
-                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-2.5 group-hover:text-purple-300 transition-colors drop-shadow-sm">
+                    {/* Project Title */}
+                    <h3
+                      className="text-lg sm:text-xl font-extrabold px-3.5 py-1.5 rounded-[10px] w-fit mb-3 tracking-tight text-white bg-transparent shadow-none"
+                      style={{
+                        backgroundColor: 'transparent',
+                        color: '#ffffff',
+                      }}
+                    >
                       {project.title[language]}
                     </h3>
 

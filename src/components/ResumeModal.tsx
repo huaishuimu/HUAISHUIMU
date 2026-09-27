@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { X, Printer, Phone, Mail, MapPin, Sparkles, GraduationCap, Briefcase, Award, Cpu, User, FileText, CheckCircle2, Globe, MessageSquare } from 'lucide-react';
 import { Language } from '../types';
+import { designerProfile } from '../data/portfolioData';
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -106,7 +107,7 @@ export const ResumeModal = ({ isOpen, language, onClose }: ResumeModalProps) => 
               <div className="text-center md:text-left">
                 <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl mx-auto md:mx-0 overflow-hidden mb-4 border-2 border-purple-400/40 shadow-[0_4px_20px_rgba(147,51,234,0.25)] bg-[#0d091f] flex items-center justify-center">
                   <img
-                    src="/avatar.jpg"
+                    src={designerProfile.avatar || "/avatar.jpg"}
                     alt="冯依然 证件照"
                     className="w-full h-full object-cover object-top select-none"
                     referrerPolicy="no-referrer"
@@ -236,7 +237,10 @@ export const ResumeModal = ({ isOpen, language, onClose }: ResumeModalProps) => 
                     isWhitePaper ? 'bg-slate-50 border-slate-200' : 'bg-[#150f2e]/70 border-purple-500/25'
                   }`}>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1.5">
-                      <h3 className="font-bold text-sm sm:text-base text-purple-300">
+                      <h3
+                        className="font-bold text-sm sm:text-base text-purple-300"
+                        style={{ color: '#d8b4fe' }}
+                      >
                         睿云云平台(课程云实验网站)UI设计与迭代
                       </h3>
                       <span className="text-xs font-mono text-gray-400 shrink-0">

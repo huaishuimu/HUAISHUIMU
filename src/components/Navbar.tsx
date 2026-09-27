@@ -56,15 +56,13 @@ export const Navbar = ({
               className="w-full h-full rounded-full object-cover object-top select-none"
               referrerPolicy="no-referrer"
             />
-            <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-[#0d091f]" />
           </div>
           <div className="flex flex-col">
             <span className="text-sm font-bold tracking-tight text-white group-hover:text-purple-200 transition-colors drop-shadow-[0_0_12px_rgba(192,132,252,0.3)]">
               {designerProfile.name[language]}
             </span>
-            <span className="text-[10px] text-gray-400 font-mono tracking-tight flex items-center gap-1">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-              <span>{language === 'zh' ? 'UI / 视觉设计' : 'UI & Visual'}</span>
+            <span className="text-[10px] text-gray-400 font-mono tracking-tight">
+              {language === 'zh' ? 'UI / 视觉设计' : 'UI & Visual'}
             </span>
           </div>
         </div>

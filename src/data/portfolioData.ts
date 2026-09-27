@@ -1,7 +1,33 @@
 import { DesignerProfile, Project, Experience, Education, SkillDimension, ToolStack } from '../types';
+import avatarImg from '../assets/images/avatar.jpg';
+import card1Img from '../assets/images/regenerated_image_1790124919848.png';
+import card2Img from '../assets/images/regenerated_image_1790124924991.png';
+import card3Img from '../assets/images/regenerated_image_1790124922846.png';
+import card4Img from '../assets/images/regenerated_image_1790124916164.png';
+import card5Img from '../assets/images/regenerated_image_1790494753666.png';
+import card6Img from '../assets/images/regenerated_image_1790124911271.png';
+import qwenLongStripImg from '../assets/images/regenerated_image_1790127515360.webp';
+import qwenLongStripPart2Img from '../assets/images/regenerated_image_1790130913808.webp';
+import chicaltLongStripImg from '../assets/images/regenerated_image_1790128587078.webp';
+import chicaltLongStripPart2Img from '../assets/images/regenerated_image_1790129044683.webp';
+import chicaltLongStripPart3Img from '../assets/images/chicalt_strip_part3_1790129096186.jpg';
+import chicaltLongStripPart4Img from '../assets/images/chicalt_strip_part4_1790129397068.jpg';
+import slinkLongStripImg from '../assets/images/slink_long_strip_1790129692731.jpg';
+import slinkLongStripPart2Img from '../assets/images/slink_strip_part2_1790130059173.jpg';
+import slinkLongStripPart3Img from '../assets/images/slink_strip_part3_1790130159294.jpg';
+import slinkLongStripPart4Img from '../assets/images/slink_strip_part4_1790130597932.jpg';
+import sisterLiuLongStripPart1Img from '../assets/images/regenerated_image_1790131459322.webp';
+import sisterLiuLongStripPart2Img from '../assets/images/regenerated_image_1790131560093.webp';
+import sisterLiuLongStripPart3Img from '../assets/images/regenerated_image_1790131692725.webp';
+import neonNocturneLongStripImg from '../assets/images/regenerated_image_1790132076444.webp';
+import nioLongStripPart1Img from '../assets/images/regenerated_image_1790132633705.webp';
+import nioLongStripPart2Img from '../assets/images/regenerated_image_1790132804610.webp';
+import nioLongStripPart3Img from '../assets/images/regenerated_image_1790132960822.webp';
+import qwenDigitalAvatarVideo from '../assets/images/qwen_digital_avatar_motion.mp4';
+import qwenDigitalAvatarPoster from '../assets/images/qwen_digital_avatar_1790142118046.jpg';
 
 export const designerProfile: DesignerProfile = {
-  avatar: '/avatar.jpg',
+  avatar: avatarImg,
   name: {
     zh: '冯依然',
     en: 'Feng Yiran',
@@ -76,11 +102,16 @@ export const projectsData: Project[] = [
     tags: ['B端协同', '项目管理平台'],
     accentColor: '#4c71fe',
     featured: true,
-    coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
+    coverImage: card1Img,
     gallery: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
+      card1Img,
+      slinkLongStripImg,
+      slinkLongStripPart2Img,
       'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop',
     ],
+    longStripImage: slinkLongStripImg,
+    longStripImages: [slinkLongStripImg, slinkLongStripPart2Img],
+    zcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4NDc5MDg=.html',
     summary: {
       zh: '速合 (S-Link)，一款 AI 驱动的高效协作平台 主打“快速融合”理念，通过 AI 赋能与多维度项目看板，解决跨部门协同痛点。设计风格冷静、克制，采用蓝色商务调性，旨在为现代企业提供极简、专业且全端覆盖的项目管理解决方案。',
       en: 'An AI-driven agile collaboration platform focusing on seamless fusion, multi-dimensional boards, and minimalist enterprise blue aesthetics.',
@@ -128,11 +159,18 @@ export const projectsData: Project[] = [
     tags: ['移动端 AI', '全场景 AIOS'],
     accentColor: '#2938f5',
     featured: true,
-    coverImage: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop',
+    coverImage: card2Img,
     gallery: [
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop',
+      card2Img,
+      qwenLongStripImg,
+      qwenLongStripPart2Img,
       'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1200&auto=format&fit=crop',
     ],
+    longStripImage: qwenLongStripImg,
+    longStripImages: [qwenLongStripImg, qwenLongStripPart2Img],
+    videoUrl: qwenDigitalAvatarVideo,
+    videoPoster: qwenDigitalAvatarPoster,
+    zcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4NDA1ODg=.html',
     summary: {
       zh: '本方案将千问 App 重塑为全场景 AI 智能体操作系统，深度打通生活服务与专业创作两大体系。设计立足“千人千面”逻辑，支持用户深度定制私有数字人。针对中国用户偏好，确立了以语音直达为核心的扁平化交互体系，构建起一个高度个性化、无缝流转的全时态 AI 智数中枢。',
       en: 'Evolving from chat-box into an omni-scenario AI Agent OS with multimodal hubs, visual memory timelines, and personalized digital companion avatars.',
@@ -180,11 +218,18 @@ export const projectsData: Project[] = [
     tags: ['跨境电商', 'AI虚拟试衣'],
     accentColor: '#ff7686',
     featured: false,
-    coverImage: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop',
+    coverImage: card3Img,
     gallery: [
-      'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop',
+      card3Img,
+      chicaltLongStripImg,
+      chicaltLongStripPart2Img,
+      chicaltLongStripPart3Img,
+      chicaltLongStripPart4Img,
       'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop',
     ],
+    longStripImage: chicaltLongStripImg,
+    longStripImages: [chicaltLongStripImg, chicaltLongStripPart2Img, chicaltLongStripPart3Img, chicaltLongStripPart4Img],
+    zcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4MjQwNzI=.html',
     summary: {
       zh: 'ChicAlt 是聚焦 18-35 岁时尚女性的跨境电商 App，对标 Shein，覆盖服饰、箱包、美妆等品类，以“AI 赋能个性时尚”为核心。设计融合 AI 虚拟试衣、精准搭配推荐与云感极简设计，构建“发现 - 试穿 - 购买”的沉浸式时尚闭环。',
       en: 'Cross-border fashion app featuring 3D body scanning, AI virtual fitting rooms, and intuitive emotional navigation.',
@@ -232,11 +277,16 @@ export const projectsData: Project[] = [
     tags: ['3D潮玩 IP', '品牌全案衍生'],
     accentColor: '#f59e0b',
     featured: false,
-    coverImage: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1200&auto=format&fit=crop',
+    coverImage: card4Img,
     gallery: [
-      'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1200&auto=format&fit=crop',
+      card4Img,
+      sisterLiuLongStripPart1Img,
+      sisterLiuLongStripPart2Img,
+      sisterLiuLongStripPart3Img,
     ],
+    longStripImage: sisterLiuLongStripPart1Img,
+    longStripImages: [sisterLiuLongStripPart1Img, sisterLiuLongStripPart2Img, sisterLiuLongStripPart3Img],
+    zcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4NDc5MDg=.html',
     summary: {
       zh: '“刘姐菜篮子”是一个扎根江苏、以温暖人情味为核心的数字菜场品牌。以“帮农·助农·惠市民”为使命，原创孵化品牌主理人“刘姐”与忠实伙伴“小满”两大3D角色，涵盖角色三视图、状态表情、季节场景换装、线上运营大促物料及文创插画。',
       en: 'Complete 3D mascot incubation for Sister Liu and Xiao Man, including turnaround blueprints, seasonal outfits, interactive emoji packs, and holiday promotional key art.',
@@ -284,11 +334,14 @@ export const projectsData: Project[] = [
     tags: ['赛博朋克', '游戏官网 KV'],
     accentColor: '#d946ef',
     featured: false,
-    coverImage: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop',
+    coverImage: card5Img,
     gallery: [
-      'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop',
+      card5Img,
+      neonNocturneLongStripImg,
     ],
+    longStripImage: neonNocturneLongStripImg,
+    longStripImages: [neonNocturneLongStripImg],
+    zcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4NDEwNDA=.html',
     summary: {
       zh: '《Neon Nocturne 霓虹夜想曲》是一款结合赛博朋克科幻与音乐解谜冒险的节奏类游戏。视觉以“高频感官刺激 × 低生活高科技世界观”的瞬间浓缩为导向，完成主视觉 KV、定制字体设计、角色立绘展示、曲包交互与多端官网全景布局。',
       en: 'Immersive gaming portal combining cyber-visuals, bespoke typography, responsive web architecture, and dynamic hero KV art.',
@@ -336,11 +389,16 @@ export const projectsData: Project[] = [
     tags: ['AIGC视觉', '超级符号海报'],
     accentColor: '#38bdf8',
     featured: false,
-    coverImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
+    coverImage: card6Img,
     gallery: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop',
+      card6Img,
+      nioLongStripPart1Img,
+      nioLongStripPart2Img,
+      nioLongStripPart3Img,
     ],
+    longStripImage: nioLongStripPart1Img,
+    longStripImages: [nioLongStripPart1Img, nioLongStripPart2Img, nioLongStripPart3Img],
+    zcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4NDA5MDQ=.html',
     summary: {
       zh: '本系列通过 AIGC 技术，将蔚来 ET5 Touring 的车型美学与品牌色彩，分别融入“色境共生”东方禅意与“巡境四时·地貌史诗”两大主题，创作出系列视觉海报。旨在超越传统汽车广告，以数字艺术形式诠释蔚来品牌文化中“设计与环境共鸣”、“科技与人文共生”的核心精神。',
       en: 'Generative AI brand posters blending NIO ET5 Touring design with epic natural geology, exploring design-nature symbiosis.',
