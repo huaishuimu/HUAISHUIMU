@@ -8,9 +8,9 @@ import card5Img from '../assets/images/regenerated_image_1790494753666.png';
 import card6Img from '../assets/images/regenerated_image_1790124911271.png';
 import qwenLongStripImg from '../assets/images/regenerated_image_1790127515360.webp';
 import qwenLongStripPart2Img from '../assets/images/regenerated_image_1790130913808.webp';
-import chicaltLongStripImg from '../assets/images/regenerated_image_1790128587078.webp';
+import chicaltLongStripImg from '../assets/images/regenerated_image_1790496663518.webp';
 import chicaltLongStripPart2Img from '../assets/images/regenerated_image_1790129044683.webp';
-import chicaltLongStripPart3Img from '../assets/images/chicalt_strip_part3_1790129096186.jpg';
+import chicaltLongStripPart3Img from '../assets/images/regenerated_image_1790495997684.webp';
 import chicaltLongStripPart4Img from '../assets/images/chicalt_strip_part4_1790129397068.jpg';
 import slinkLongStripImg from '../assets/images/slink_long_strip_1790129692731.jpg';
 import slinkLongStripPart2Img from '../assets/images/slink_strip_part2_1790130059173.jpg';
@@ -107,11 +107,12 @@ export const projectsData: Project[] = [
       card1Img,
       slinkLongStripImg,
       slinkLongStripPart2Img,
+      slinkLongStripPart3Img,
       'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop',
     ],
     longStripImage: slinkLongStripImg,
-    longStripImages: [slinkLongStripImg, slinkLongStripPart2Img],
-    zcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4NDc5MDg=.html',
+    longStripImages: [slinkLongStripImg, slinkLongStripPart2Img, slinkLongStripPart3Img],
+    zcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4NDA3MjQ=.html',
     summary: {
       zh: '速合 (S-Link)，一款 AI 驱动的高效协作平台 主打“快速融合”理念，通过 AI 赋能与多维度项目看板，解决跨部门协同痛点。设计风格冷静、克制，采用蓝色商务调性，旨在为现代企业提供极简、专业且全端覆盖的项目管理解决方案。',
       en: 'An AI-driven agile collaboration platform focusing on seamless fusion, multi-dimensional boards, and minimalist enterprise blue aesthetics.',
@@ -223,12 +224,10 @@ export const projectsData: Project[] = [
       card3Img,
       chicaltLongStripImg,
       chicaltLongStripPart2Img,
-      chicaltLongStripPart3Img,
-      chicaltLongStripPart4Img,
       'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop',
     ],
     longStripImage: chicaltLongStripImg,
-    longStripImages: [chicaltLongStripImg, chicaltLongStripPart2Img, chicaltLongStripPart3Img, chicaltLongStripPart4Img],
+    longStripImages: [chicaltLongStripImg, chicaltLongStripPart2Img],
     zcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4MjQwNzI=.html',
     summary: {
       zh: 'ChicAlt 是聚焦 18-35 岁时尚女性的跨境电商 App，对标 Shein，覆盖服饰、箱包、美妆等品类，以“AI 赋能个性时尚”为核心。设计融合 AI 虚拟试衣、精准搭配推荐与云感极简设计，构建“发现 - 试穿 - 购买”的沉浸式时尚闭环。',
