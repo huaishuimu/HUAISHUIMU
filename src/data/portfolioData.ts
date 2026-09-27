@@ -8,7 +8,7 @@ import card5Img from '../assets/images/regenerated_image_1790494753666.png';
 import card6Img from '../assets/images/regenerated_image_1790124911271.png';
 import qwenLongStripImg from '../assets/images/regenerated_image_1790127515360.webp';
 import qwenLongStripPart2Img from '../assets/images/regenerated_image_1790130913808.webp';
-import chicaltLongStripImg from '../assets/images/regenerated_image_1790496663518.webp';
+import chicaltLongStripImg from '../assets/images/regenerated_image_1790497896089.webp';
 import chicaltLongStripPart2Img from '../assets/images/regenerated_image_1790129044683.webp';
 import chicaltLongStripPart3Img from '../assets/images/regenerated_image_1790495997684.webp';
 import chicaltLongStripPart4Img from '../assets/images/chicalt_strip_part4_1790129397068.jpg';
