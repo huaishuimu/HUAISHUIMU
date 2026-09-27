@@ -29,6 +29,8 @@ export interface Project {
   coverImage: string;
   videoUrl?: string;
   videoPoster?: string;
+  videoZcoolUrl?: string;
+  videoTitle?: LocalizedString;
   gallery: string[];
   longStripImage?: string;
   longStripImages?: string[];

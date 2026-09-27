@@ -76,14 +76,27 @@ export const ProjectModal = ({ project, language, onClose }: ProjectModalProps) 
         {/* Dynamic Video Showcase (数字人动效与动态演示) */}
         {project.videoUrl && (
           <div className="mb-8 rounded-[16px] overflow-hidden border border-[#dda6ff]/40 bg-[#090614] shadow-[0_4px_30px_rgba(221,166,255,0.18)]">
-            <div className="px-4 py-3 bg-[#140c2b] border-b border-[#dda6ff]/20 flex items-center justify-between">
+            <div className="px-4 py-3 bg-[#140c2b] border-b border-[#dda6ff]/20 flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#dda6ff]">
                 <Play className="w-3.5 h-3.5 fill-[#dda6ff]/20 text-[#dda6ff]" />
                 <span>{language === 'zh' ? '预设数字人动效演示 · 实时渲染态 (Avatar Motion)' : 'Digital Human Avatar Motion Demo'}</span>
               </div>
-              <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-[#dda6ff]/15 text-[#dda6ff] border border-[#dda6ff]/30 font-mono">
-                HD 60FPS
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-[#dda6ff]/15 text-[#dda6ff] border border-[#dda6ff]/30 font-mono">
+                  HD 60FPS
+                </span>
+                {(project.videoZcoolUrl || project.zcoolUrl) && (
+                  <a
+                    href={project.videoZcoolUrl || project.zcoolUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-purple-900/60 hover:bg-purple-800/80 text-purple-200 border border-purple-500/30 transition-all hover:scale-105"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    <span>{language === 'zh' ? '站酷视频原案' : 'View on Zcool'}</span>
+                  </a>
+                )}
+              </div>
             </div>
             <div className="relative aspect-video w-full bg-[#05030a] flex items-center justify-center">
               <video
@@ -97,6 +110,22 @@ export const ProjectModal = ({ project, language, onClose }: ProjectModalProps) 
                 className="w-full h-full object-contain"
               />
             </div>
+            {(project.videoZcoolUrl || project.zcoolUrl) && (
+              <div className="p-3.5 bg-[#0d091f]/90 border-t border-[#dda6ff]/20 flex flex-wrap items-center justify-between gap-2 text-xs text-gray-400 font-mono">
+                <span className="flex items-center gap-1.5 text-gray-300">
+                  ✦ {project.videoTitle ? project.videoTitle[language] : (language === 'zh' ? '千问APP | 预设数字人动效展示 · 站酷推荐作品' : 'Qwen APP | Digital Avatar Motion Showcase')}
+                </span>
+                <a
+                  href={project.videoZcoolUrl || project.zcoolUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[#dda6ff] hover:text-white underline decoration-[#dda6ff]/50 flex items-center gap-1.5 transition-colors font-medium"
+                >
+                  <span>{language === 'zh' ? '在站酷 (ZCOOL) 查看数字人动效原案' : 'View Motion Case on Zcool'}</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            )}
           </div>
         )}
 

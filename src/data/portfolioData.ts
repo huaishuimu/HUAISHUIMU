@@ -171,6 +171,11 @@ export const projectsData: Project[] = [
     longStripImages: [qwenLongStripImg, qwenLongStripPart2Img],
     videoUrl: qwenDigitalAvatarVideo,
     videoPoster: qwenDigitalAvatarPoster,
+    videoZcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4ODExNTY=.html',
+    videoTitle: {
+      zh: '千问APP | 预设数字人动效展示 · 站酷推荐作品',
+      en: 'Qwen APP | Digital Avatar Motion Showcase on ZCOOL',
+    },
     zcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4NDA1ODg=.html',
     summary: {
       zh: '本方案将千问 App 重塑为全场景 AI 智能体操作系统，深度打通生活服务与专业创作两大体系。设计立足“千人千面”逻辑，支持用户深度定制私有数字人。针对中国用户偏好，确立了以语音直达为核心的扁平化交互体系，构建起一个高度个性化、无缝流转的全时态 AI 智数中枢。',
