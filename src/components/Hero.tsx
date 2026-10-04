@@ -4,9 +4,10 @@ import { ArrowDown, Copy, Check, Sparkles, ExternalLink } from 'lucide-react';
 import { Language, ProjectCategory } from '../types';
 import card1Img from '../assets/images/regenerated_image_1790124919848.png';
 import card2Img from '../assets/images/regenerated_image_1790124924991.png';
-import card3Img from '../assets/images/regenerated_image_1790124922846.png';
+import card3Img from '../assets/images/regenerated_image_1790497896089.webp';
 import card4Img from '../assets/images/regenerated_image_1790124916164.png';
 import card5Img from '../assets/images/regenerated_image_1790124911271.png';
+import xueyingCoverImg from '../assets/images/regenerated_image_1790499160464.png';
 
 interface HeroProps {
   language: Language;
@@ -81,10 +82,10 @@ const CARDS: ImageCardData[] = [
     zIndex: 40,
   },
   {
-    id: 'nio-aigc-super-symbol',
-    title: '蔚来 NIO × AIGC 超级符号海报',
-    categoryZh: 'AIGC 概念视觉 • 超级符号',
-    categoryEn: 'AIGC Super Symbol Post',
+    id: 'neon-nocturne-game',
+    title: '《Neon Nocturne 霓虹夜想曲》',
+    categoryZh: '网页设计 • 赛博朋克KV',
+    categoryEn: 'Cyberpunk Game Web & KV',
     imgUrl: card5Img,
     initRotate: -2,
     initX: 0,

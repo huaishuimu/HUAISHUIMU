@@ -44,6 +44,29 @@ export interface Project {
   deliverables: LocalizedString[];
   tools: string[];
   designHighlights: DesignHighlight[];
+  digitalHumanProfile?: DigitalHumanProfile;
+}
+
+export interface DigitalHumanProfile {
+  name: string;
+  greeting: string;
+  gender: string;
+  personality: string;
+  birthday: string;
+  hobbies: string[];
+  colorPalette: { label: string; hex: string }[];
+  tags: string[];
+  outfits: {
+    name: LocalizedString;
+    suitType: LocalizedString;
+    features: LocalizedString;
+  }[];
+  posters: {
+    title: LocalizedString;
+    subtitle: LocalizedString;
+    desc: LocalizedString;
+  }[];
+  emotes: string[];
 }
 
 export interface Experience {

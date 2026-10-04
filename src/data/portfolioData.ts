@@ -20,10 +20,10 @@ import sisterLiuLongStripPart1Img from '../assets/images/regenerated_image_17901
 import sisterLiuLongStripPart2Img from '../assets/images/regenerated_image_1790131560093.webp';
 import sisterLiuLongStripPart3Img from '../assets/images/regenerated_image_1790131692725.webp';
 import neonNocturneLongStripImg from '../assets/images/regenerated_image_1790132076444.webp';
-import nioLongStripPart1Img from '../assets/images/regenerated_image_1790132633705.webp';
-import nioLongStripPart2Img from '../assets/images/regenerated_image_1790132804610.webp';
-import nioLongStripPart3Img from '../assets/images/regenerated_image_1790132960822.webp';
-import qwenDigitalAvatarVideo from '../assets/images/qwen_digital_avatar_motion.mp4';
+import xueyingCoverImg from '../assets/images/regenerated_image_1790499160464.png';
+import xueyingPosterMainImg from '../assets/images/xueying_poster_main_1790498740142.jpg';
+import xueyingOutfitsImg from '../assets/images/xueying_outfits_showcase_1790498786135.jpg';
+import xueyingKeyVisualImg from '../assets/images/regenerated_image_1791085739545.png';
 import qwenDigitalAvatarPoster from '../assets/images/qwen_digital_avatar_1790142118046.jpg';
 
 export const designerProfile: DesignerProfile = {
@@ -169,7 +169,6 @@ export const projectsData: Project[] = [
     ],
     longStripImage: qwenLongStripImg,
     longStripImages: [qwenLongStripImg, qwenLongStripPart2Img],
-    videoUrl: qwenDigitalAvatarVideo,
     videoPoster: qwenDigitalAvatarPoster,
     videoZcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4ODExNTY=.html',
     videoTitle: {
@@ -377,61 +376,123 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    id: 'nio-aigc-super-symbol',
+    id: 'ice-snow-xueying',
     category: 'aigc',
-    categoryLabel: { zh: 'AIGC 视觉', en: 'AIGC Posters' },
+    categoryLabel: { zh: 'AIGC 视觉', en: 'AIGC / Digital Human' },
     title: {
-      zh: '蔚来 NIO × AIGC 创作超级符号海报',
-      en: 'NIO × AIGC Super Symbol Poster Series',
+      zh: '《冰雪·幻映》冰雪数字人形象企划',
+      en: 'Ice & Snow · Phantom: Digital Human IP Project',
     },
     subtitle: {
-      zh: '以生成式 AI 融合蔚来 ET5 Touring 车形美学、东方禅意与全球史诗地貌。',
-      en: 'AI generative exploration blending NIO ET5 Touring with epic natural geology.',
+      zh: '以2026米兰冬奥会为背景，通过AIGC与AR技术打造虚拟形象大使“雪映”，融合竞技体育速度感与未来赛博美学。',
+      en: '2026 Milan Winter Olympics Virtual Ambassador "Xueying", fusing athletic velocity with cybernetic winter aesthetics via AIGC & AR pipelines.',
     },
-    year: '2024',
-    role: { zh: 'AIGC 概念设计师', en: 'AIGC Visual Artist' },
-    tags: ['AIGC视觉', '超级符号海报'],
-    accentColor: '#38bdf8',
-    featured: false,
-    coverImage: card6Img,
+    year: '2025',
+    role: { zh: 'AIGC概念设计师 / 3D视觉艺术家', en: 'AIGC Concept Artist / 3D Visual Designer' },
+    tags: ['AIGC视觉', '数字人企划', '2026米兰冬奥', '赛博机能'],
+    accentColor: '#00d4ff',
+    featured: true,
+    coverImage: xueyingCoverImg,
+    videoPoster: xueyingKeyVisualImg,
+    videoZcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4ODA0NDg=.html?alichlgref=https%3A%2F%2Fwww.zcool.com.cn%2Fu%2FZMTEyMjc4Mjg4',
+    videoTitle: {
+      zh: '《冰雪·幻映》冰雪数字人形象企划 · 动态视频原案演示',
+      en: 'Ice & Snow · Phantom: Digital Human Motion Video Showcase on ZCOOL',
+    },
+    zcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4ODA0NDg=.html?alichlgref=https%3A%2F%2Fwww.zcool.com.cn%2Fu%2FZMTEyMjc4Mjg4',
     gallery: [
-      card6Img,
-      nioLongStripPart1Img,
-      nioLongStripPart2Img,
-      nioLongStripPart3Img,
+      xueyingCoverImg,
+      xueyingKeyVisualImg,
+      xueyingPosterMainImg,
+      xueyingOutfitsImg,
     ],
-    longStripImage: nioLongStripPart1Img,
-    longStripImages: [nioLongStripPart1Img, nioLongStripPart2Img, nioLongStripPart3Img],
-    zcoolUrl: 'https://www.zcool.com.cn/work/ZNzM4NDA5MDQ=.html',
+    longStripImage: xueyingPosterMainImg,
+    longStripImages: [xueyingKeyVisualImg, xueyingPosterMainImg, xueyingOutfitsImg],
     summary: {
-      zh: '本系列通过 AIGC 技术，将蔚来 ET5 Touring 的车型美学与品牌色彩，分别融入“色境共生”东方禅意与“巡境四时·地貌史诗”两大主题，创作出系列视觉海报。旨在超越传统汽车广告，以数字艺术形式诠释蔚来品牌文化中“设计与环境共鸣”、“科技与人文共生”的核心精神。',
-      en: 'Generative AI brand posters blending NIO ET5 Touring design with epic natural geology, exploring design-nature symbiosis.',
+      zh: '本项目「冰雪·幻映」以 2026 米兰冬奥会为背景，通过 AIGC 与 AR 技术打造虚拟形象大使“雪映”，深度融合竞技体育的“速度感”与数字艺术的“未来感”；通过精心设计的「冬奥三章」系列机能服饰、AR 交互动画及电影级宣传 MV，生动诠释了“因热‘AI’出发，‘AI’上运动”的核心理念，实现了冬奥精神在数字维度的诗意表达与沉浸式传播。',
+      en: 'Under the backdrop of the 2026 Milan Winter Olympics, "Ice & Snow · Phantom" builds the virtual sports ambassador "Xueying" through AIGC and AR technologies, fusing high-speed athletics with cyber aesthetic storytelling.',
     },
     metrics: [],
     challenge: {
-      zh: '如何让 AI 精确保持蔚来超级符号几何比例与车体特定光影，避免 AI 生成中的结构扭曲与机械感。',
-      en: 'Preserving exact geometric brandmark fidelity and automotive specular highlights via AI pipelines.',
+      zh: '如何在数字人身上完美平衡冬奥高规格竞技运动装备的专业机能性、少女角色的亲和力与未来赛博光效，并实现从3D模型、海报、插画到多场景表情包的一体化量产。',
+      en: 'Balancing Olympic-grade functional apparel specifications, character warmth, and cybernetic aesthetic illumination across multi-format digital assets.',
     },
     solution: {
-      zh: '建立“黑白线稿 → Normal Map法线贴图 → Depth深度图 → LibLib/SD重绘 → 即梦AI合成”的高精度工作流。',
-      en: 'Multi-pass ControlNet workflow leveraging depth maps, normal maps, and post-synthesis compositing.',
+      zh: '构建以“雪映”为核心的数字人视觉矩阵：设定勇敢坚毅与温柔活泼的角色双面性；打造“极速流光/短道速滑”、“雪境温柔/高山滑雪”、“烬火冰华/花样滑冰”三大专业竞技换装体系；配合破空动感海报、手绘插画、主KV及12款高频Q版表情包全渠道传播。',
+      en: 'Formulating a full-matrix digital persona: 3 signature competition outfits, dynamic action posters, narrative illustrations, and an expressive emote system.',
     },
     deliverables: [
-      { zh: '蔚来 ET5 Touring「色境共生」4张系列主题海报', en: '4 "Symbiosis with Color" theme posters' },
-      { zh: '蔚来「巡境四时·地貌史诗」雪山、沙漠与秘境海报', en: '"Epic Landscapes" seasonal terrain poster collection' },
-      { zh: 'AIGC 品牌符号控形工作流与参数沉淀文档', en: 'Precision brandmark generative pipeline documentation' },
+      { zh: '数字人「雪映」基础三视图、Q版三视图及人设档案（配色规范、性格属性）', en: 'Character design sheets: 3-view ortho turns, chibi avatars, and brand color system' },
+      { zh: '「冬奥三章」竞技机能换装体系：极速流光（短道速滑）、雪境温柔（高山滑雪）、烬火冰华（花样滑冰）', en: 'Tri-chapter Olympic outfits: Speed Skating, Alpine Skiing, and Figure Skating suits' },
+      { zh: '系列动态主题海报（《雪跃山河·冰耀释芒》《踏雪飞驰·冰上绽放》《FIGURE SKATING》）', en: 'Action poster collection: Alpine leaps, speed skating dives, and figure skating highlights' },
+      { zh: '冰雪运动赛道与单板公园插画，双版本概念主KV（雪域驰骋 / 赛博加速光轨）', en: 'Snowpark narrative illustrations & dual-concept Key Visuals (Alpine Vista / Cyber Acceleration)' },
+      { zh: '全套12款数字人轻量化Q版情绪表情包体系', en: 'Complete 12-emote set for interactive social & fan engagement' },
     ],
-    tools: ['Midjourney', 'Stable Diffusion', 'Liblib', 'Photoshop'],
+    tools: ['Midjourney', 'Stable Diffusion', 'Cinema 4D', 'Blender', 'Photoshop', 'After Effects'],
     designHighlights: [
       {
-        title: { zh: '超级符号大地艺术化', en: 'Land-Art Brand Symbolism' },
-        desc: { zh: '将蔚来车标转化为雪山积雪雕塑、透明悬浮水珠与巨型岩石，具有强烈史诗感。', en: 'Transforming the NIO symbol into monumental snow sculptures and ethereal liquid glass.' },
+        title: { zh: '极速机能美学与动态光轨', en: 'Kinetic Functional Aesthetics & Light Trails' },
+        desc: { zh: '以赛博蓝光流线勾勒速滑防风风镜与流线型速滑服，打破传统冬季运动服饰的厚重感，赋予角色极强动势与破空穿透力。', en: 'Cybernetic luminous accents and aerodynamic contours redefine winter sportswear, delivering sheer kinetic energy.' },
       },
       {
-        title: { zh: '高精度工业流控形', en: 'Precision ControlNet Pipeline' },
-        desc: { zh: '运用 Depth 与 Normal Map 严密约束车型线条与车标比例，实现商业级精细交付。', en: 'Rigorous control over vehicle reflections and geometric tolerances for production fidelity.' },
+        title: { zh: '多维赛事换装与人设档案体系', en: 'Multi-Discipline Competition Wardrobe' },
+        desc: { zh: '精准拆解高山滑雪、短道速滑、花样滑冰三种赛事的专业动作与姿态，分别打造粉白防寒羽绒机能、赛博流光塑形与渐变冰华裙装。', en: 'Specialized apparel for Alpine, Speed Skating, and Figure Skating, matching athletic movements with thematic styling.' },
+      },
+      {
+        title: { zh: '全场景传播物料矩阵（海报·插画·KV·表情包）', en: 'All-Scenario Communication Matrix' },
+        desc: { zh: '从百米巨幅主KV、专业赛事主题海报，到手绘插画与12款亲和力Q版表情包，构建起从宏大叙事到微观社群互动的全域传播链。', en: 'From cinematic key visuals and adrenaline posters to flat illustrations and 12 chibi emotes for viral reach.' },
       },
     ],
+    digitalHumanProfile: {
+      name: '雪映 (XUEYING)',
+      greeting: 'hi，我是雪映',
+      gender: '女',
+      personality: '勇敢，坚毅，温柔，活泼',
+      birthday: '1.20',
+      hobbies: ['单板滑雪', '高山滑雪', '短道速滑', '花样滑冰'],
+      colorPalette: [
+        { label: '冰晶淡蓝', hex: '#AAEBFF' },
+        { label: '赛博极光蓝', hex: '#00D4FF' },
+        { label: '晴空冰雪蓝', hex: '#57BBFF' },
+        { label: '深邃高能蓝', hex: '#0090FF' },
+      ],
+      tags: ['极限美学化身', '冬奥使者', '赛博机能少女'],
+      outfits: [
+        {
+          name: { zh: '极速流光', en: 'Speed Stream' },
+          suitType: { zh: '短道速滑套装', en: 'Speed Skating Suit' },
+          features: { zh: '赛博流光塑形速滑服、全覆防风破风镜与竞技冰刀', en: 'Streamlined aerodynamic cyber-weave suit with HUD visor' },
+        },
+        {
+          name: { zh: '雪境温柔', en: 'Snow Gentle' },
+          suitType: { zh: '高山滑雪套装', en: 'Alpine Skiing Suit' },
+          features: { zh: '粉白高保暖机能防寒羽绒服、高阻隔滑雪镜与专属雪板', en: 'Pink-white thermal alpine puffer with protective goggle gear' },
+        },
+        {
+          name: { zh: '烬火冰华', en: 'Ember Ice Flora' },
+          suitType: { zh: '花样滑冰套装', en: 'Figure Skating Suit' },
+          features: { zh: '烈焰与冰晶交织的橙红渐变芭蕾旋转裙，展现灵动之美', en: 'Flame-to-ice gradient ceremonial ballet dress for artistic spins' },
+        },
+      ],
+      posters: [
+        {
+          title: { zh: '雪跃山河·冰耀释芒', en: 'Snow Leap Over Peaks' },
+          subtitle: { zh: 'ICE & SPORTS 高山滑雪雪山跳跃动态海报', en: 'Alpine Skiing dynamic jump' },
+          desc: { zh: '定格雪映于险峻雪峰高空回旋的瞬间，展现极限滑雪的冲击力。', en: 'Capturing Xueying spinning high above alpine ridges.' },
+        },
+        {
+          title: { zh: '踏雪飞驰·冰上绽放', en: 'Snow Flight Over Ice' },
+          subtitle: { zh: '短道速滑破冰俯冲动态海报', en: 'Speed Skating forward dive' },
+          desc: { zh: '俯冲破冰出击，赛博冰晶飞溅，释放竞技体育的力量美感。', en: 'Cutting through ice with cyber flare and explosive speed.' },
+        },
+        {
+          title: { zh: 'FIGURE SKATING 花样滑冰', en: 'Figure Skating Grace' },
+          subtitle: { zh: '冰上旋转飞跃高光海报', en: 'Figure Skating ice spin highlight' },
+          desc: { zh: '在极光般的冰面下如梦幻冰华旋转，融聚力量与诗意。', en: 'Ethereal pirouette blending grace, agility and warmth.' },
+        },
+      ],
+      emotes: ['啊？！', '好冷呀', '咋回事', '真优雅', '哼，不服！', '想啥呢？', '找答案~', '仔细瞧瞧', '思考中...', '真行！', '歇会吧', '发个呆'],
+    },
   },
 ];
 

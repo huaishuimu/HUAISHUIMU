@@ -89,7 +89,11 @@ export const ProjectsSection = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {filteredProjects.map((project, idx) => {
             const isHovered = hoveredCardId === project.id;
-            const isFeatured = project.featured && idx === 0 && selectedCategory === 'all';
+            const isFeatured =
+              project.featured &&
+              (idx === 0 || idx === filteredProjects.length - 1) &&
+              selectedCategory === 'all' &&
+              filteredProjects.length >= 6;
 
             return (
               <div

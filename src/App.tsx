@@ -11,6 +11,7 @@ import { EducationSection } from './components/EducationSection';
 import { ContactSection } from './components/ContactSection';
 import { ProjectModal } from './components/ProjectModal';
 import { ResumeModal } from './components/ResumeModal';
+import { AiChatWidget } from './components/AiChatWidget';
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('zh');
@@ -82,12 +83,18 @@ export default function App() {
         <button
           onClick={scrollToTop}
           id="scroll-to-top-btn"
-          className="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-[#130d27]/85 hover:bg-purple-900/60 border border-purple-500/30 hover:border-purple-400 text-purple-300 hover:text-white shadow-[0_4px_24px_rgba(147,51,234,0.35)] backdrop-blur-md transition-all duration-300 hover:scale-110 cursor-pointer animate-in fade-in"
+          className="fixed bottom-22 right-6 z-30 p-2.5 rounded-full bg-[#130d27]/85 hover:bg-purple-900/60 border border-purple-500/30 hover:border-purple-400 text-purple-300 hover:text-white shadow-[0_4px_24px_rgba(147,51,234,0.35)] backdrop-blur-md transition-all duration-300 hover:scale-110 cursor-pointer animate-in fade-in"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-5 h-5" />
         </button>
       )}
+
+      {/* AI Persona Floating Chat Widget (Gemini 2.5 Pro 角色扮演智能问答) */}
+      <AiChatWidget
+        language={language}
+        onOpenResume={() => setIsResumeOpen(true)}
+      />
 
       {/* Interactive Project Case Study Modal */}
       <ProjectModal
